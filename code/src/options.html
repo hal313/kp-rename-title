@@ -1,0 +1,50 @@
+<html>
+	<head>
+        <link rel="stylesheet" type="text/css" href="options.css">
+		<title>KPRenameTitle Options</title>
+	</head>
+	
+	<body>
+        <div class="title">KPRenameTitle</div>
+        <div class="instruction">
+            You can rename tab titles based on the URL. This is useful to support
+            the auto-type functionality of KeePass.
+        </div>
+
+        <div class="hints">
+            <div class="hint">
+                Note that it might help to use the carrot (^) at the beginning of the line and the
+                dollar sign ($) at the end of the line. Example:
+                <div class="example">
+                    ^https://www.facebook.com/$
+                </div>
+            </div>
+
+            <div class="hint">
+                You can specify http AND https with the same rule by using regular expression
+                quantifiers. Example:
+                <div class="example">
+                    ^http[s]{0,1}://www.facebook.com/$
+                </div>
+            </div>
+        </div>
+
+        <div class="regularExpressions">
+		    <div class="caption">URLs:</div>
+		    <div id="urls"></div>
+		    <div id="status"></div>
+            <div class="buttons">
+		        <button id="add">Add</button>
+		        <button id="save">Save</button>
+            </div>
+        </div>
+
+        <div class="global">
+            <button id="clear">Reset All Options</button>
+        </div>
+		
+        <!-- Load scripts -->
+        <script src="options.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	</body>
+</html>
